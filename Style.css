@@ -1,0 +1,29 @@
+body{
+    font-family:Poppins;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display:grid;
+}
+
+nav{
+    grid-area:nav;
+}
+
+h1{
+    margin-left: 35px
+}
+
+ul{
+    margin-left: 15px;
+}
+
+li{
+    display:inline-block;
+    list-style-type: none;
+    margin-right:45px;
+    font-size: 22px;
+    text
+}
