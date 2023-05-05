@@ -4,6 +4,7 @@ body{
     padding: 0;
     background-color: #656565;
     color: #F5FBEF;
+    margin-bottom: 50px;
 }
 
 .wrapper{
@@ -16,6 +17,14 @@ body{
     "main main";
 }
 
+#hälsomat .wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main";
+}
+
 header{
     grid-area:header;
     display:grid;
@@ -25,6 +34,10 @@ main{
     grid-area:main;
     display:grid;
     grid-template-columns: 1fr 1fr;
+}
+
+#hälsomat main{
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 img{
@@ -45,13 +58,18 @@ h1{
 
 h2, p{
     font-size: 21px;
-    margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h2{
+    margin-top: 40px;
 }
 
 nav{
     grid-area:nav;
     display:grid;
+    margin-bottom: 50px;
 }
 
 a{
@@ -78,10 +96,23 @@ ul{
     margin-left: 15px;
 }
 
+
 li{
     display:inline-block;
     list-style-type: none;
     margin-right:45px;
     font-size: 22px;
-    text
+}
+
+.hidden1{
+    visibility: hidden;
+    width: 0%;
+    margin: 0;
+    transition: margin-right, width 1.5s;
+}
+
+.key1:hover +.hidden1{
+    visibility: visible;
+    width: auto;
+    margin-right:45px;
 }
