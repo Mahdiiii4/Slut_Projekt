@@ -5,6 +5,7 @@ body{
     background-color: #656565;
     color: #F5FBEF;
     margin-bottom: 50px;
+    min-width: 800px;
 }
 
 .wrapper{
@@ -14,16 +15,11 @@ body{
     grid-template-areas: 
     "header header"
     "nav nav"
-    "main main";
+    "main main"
+    "footer footer";
 }
 
-#hälsomat .wrapper{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "header header header"
-    "nav nav nav"
-    "main main main";
-}
+
 
 header{
     grid-area:header;
@@ -40,24 +36,32 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+#uppvärmning main{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width:90%;
     margin-top: 50px;
-    border: solid #43AA8B;
+    border: solid #FFC800;
     border-radius: 15px;
-    border-width: 5px;
+    border-width: 2px;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
 }
 
 h1{
     display:inline-block;
-    margin-left: 35px
 }
 
 h2, p{
-    font-size: 21px;
+    font-size: 1.3em;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -69,12 +73,13 @@ h2{
 nav{
     grid-area:nav;
     display:grid;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 a{
     text-decoration: none;
     color:#F5FBEF;
+    display: inline-block;
 }
 
 nav a{
@@ -82,37 +87,119 @@ nav a{
     border-color: #F5FBEF;
     border: solid;
     border-radius: 15px;
-    transition: padding 0.5s;
+    transition: padding 0.5s, border-color 0.3s;
 }
 
 nav a:hover{
     padding: 3px 20px;
-    border-color: #279AF1;
     border-style:dashed;
-    border-radius: 15px;
+}
+
+.grön:hover{
+    border-color: #43AA8B;
+}
+
+.röd:hover{
+    border-color: #4E0110;
+}
+
+.blå:hover{
+    border-color: #279AF1;
+}
+
+#börjanu .grön{
+    border-color: #43AA8B;
+}
+
+#börjanu nav li:nth-child(1){
+    background-color:#43AA8B;
+}
+
+#börjanu nav li:nth-child(2) a{
+    border-style: dashed;
+}
+
+#börjanu nav li:nth-child(3) a{
+    border-style: dashed;
+}
+
+#hälsomat .röd{
+    border-color: #4E0110;
+    background-color: #4E0110;
+}
+
+#omoss .blå{
+    border-color: #279AF1;
+}
+
+#omoss nav li:nth-child(4) a{
+    border-style: dashed;
+}
+
+#omoss nav li:nth-child(3){
+    background-color:#279AF1;
+}
+
+#uppvärmning .grön{
+    border-color: #43AA8B;
+}
+
+#uppvärmning nav li:nth-child(2){
+    background-color: #43AA8B;
+}
+
+#uppvärmning nav li:nth-child(1) a{
+    border-style: dashed;
+}
+
+#schema .grön{
+    border-color: #43AA8B;
+}
+
+#schema nav li:nth-child(2){
+    background-color: #43AA8B;
+}
+
+#schema nav li:nth-child(1) a{
+    border-style: dashed;
+}
+
+#formulär .blå{
+    border-color: #279AF1;
+}
+
+#formulär nav li:nth-child(4){
+    background-color: #279AF1;
+}
+
+#formulär nav li:nth-child(3) a{
+    border-style: dashed;
+}
+
+header a{
+    color: #F5FBEF;
+    transition: color 0.35s, font-size 0.35s;
+}
+
+header a:hover{
+    color: #FFC800;
+    font-size: 1.1em;
+}
+
+#index header a{
+    color: #FFC800;
 }
 
 ul{
+    margin-top: 0px;
     margin-left: 15px;
+    min-width: 900px;
 }
-
 
 li{
     display:inline-block;
     list-style-type: none;
     margin-right:45px;
     font-size: 22px;
-}
-
-.hidden1{
-    visibility: hidden;
-    width: 0%;
-    margin: 0;
-    transition: margin-right, width 1.5s;
-}
-
-.key1:hover +.hidden1{
-    visibility: visible;
-    width: auto;
-    margin-right:45px;
+    border-radius: 15px;
 }
