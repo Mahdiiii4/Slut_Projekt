@@ -1,36 +1,46 @@
+/*Body*/
 body{
-    font-family:Poppins, 'Times New Roman', Times, serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #656565;
-    color: #F5FBEF;
-    min-width: 800px;
+    font-family:Poppins, 'Times New Roman', Times, serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Byttar vilken font sidan använder. Om en går sönder
+     så fungerar den 
+    som är efter iställt.*/
+    margin: 0; /* Tarbort allt margin för att förleta semantik*/
+    padding: 0; /* Tarbort allt padding för att förleta semantik*/
+    background-color: #656565; /*bakgrund färg*/
+    color: #F5FBEF; /*text färge*/
 }
+/*----------------------------------------------------------------------------------------*/
 
+/*Grid*/
 .wrapper{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    display:grid; /*Skapar grid på wrapper som är en div runt om allt i body*/
+    grid-template-columns: 1fr 1fr; /*Skapar 2 columner layout*/
+    grid-template-rows: 1fr; /*En row layout*/
     grid-template-areas: 
     "header header"
     "nav nav"
     "main main"
-    "footer footer";
+    "footer footer"; /*Anger var taggar ska vara*/
+}
+
+#uppvärmning .trecolumn{ /*Ändra specifct i sidan uppvärmning classen trecolumn som finns på en section*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*Skapar 3 columner layout*/
+    grid-column: span 2; /*Gör så att denna section ska ta up 2 platser iställt för 1*/
+}
+
+#hälsomat main{ /*Ändra bara på sidan hälsomat*/
+    grid-template-columns: repeat(3, 1fr); 
 }
 
 header{
-    grid-area:header;
+    grid-area:header; /*Anger att arean som den tar heter header*/
     display:grid;
 }
 
-header a{
-    color: #F5FBEF;
-    transition: color 0.35s, font-size 0.35s;
-}
-
-header a:hover{
-    color: #FFC800;
-    font-size: 1.1em;
+nav{
+    grid-area:nav;
+    display:grid;
+    margin-bottom: 30px; /*30px plats under nav (utryme)*/
 }
 
 main{
@@ -42,40 +52,50 @@ main{
 footer{
     grid-area: footer;
     display: grid;
-    background-color: #1e1e1e;
-    margin-top: 50px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Header*/
+header a{ /*Ändrar bara a som finns i header tag*/
+    color: #F5FBEF;
+    transition: color 0.35s, font-size 0.35s; /*Animation. Den säger att artibut color ska ha animation som ska vara 0.35sekunder lång. Samt med font-size eller man kan säga scale*/
 }
 
-h1{
-    display:inline-block;
+header a:hover{ /*När musen går över a som finns i header tag så aktiveras den*/
+    color: #FFC800;
+    font-size: 1.1em; /*text storlek*/
 }
 
-h2, p, table{
-    font-size: 1.3em;
-    margin-left: 50px;
-    margin-right: 50px;
+#index header a{ /*Ändrar bara i index sidan vilken är BodyVital*/
+    color: #FFC800;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Nav*/
+ul{
+    margin-top: 0px;
+    margin-left: 15px;
+    min-width: 900px; /*Minsta bred så att den ska inte se dåligt ut*/
 }
 
-h2, table{
-    margin-top: 40px;
-}
-
-nav{
-    grid-area:nav;
-    display:grid;
-    margin-bottom: 30px;
+li{
+    display:inline-block; /*Gör så att nav bli horizantel och inte ta en hel row för varje nav menu t.ex. "Börjanu", "Hälsomat"*/
+    list-style-type: none; /*tar bort alla style från li så att den blir bara text*/
+    margin-right:45px;
+    font-size: 1.4em;
+    border-radius: 15px; /*gör så att border blir runda*/
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none; /*Tar bort allt decoration från texten*/
     color:#F5FBEF;
     display: inline-block;
 }
 
-nav a{
-    padding: 3px 7px;
+nav a{ /*Ändrar bara a som finns i nav*/
+    padding: 3px 7px; /*Lägger till plats från innut i så att själva knappen ska blir storre*/
     border-color: #F5FBEF;
-    border: solid;
+    border: solid; /*gör border style till solid*/
     border-radius: 15px;
     transition: padding 0.5s, border-color 0.3s;
 }
@@ -85,8 +105,8 @@ nav a:hover{
     border-style:dashed;
 }
 
-.grön:hover{
-    border-color: #43AA8B;
+.grön:hover{ /*Ändrar bara klassen grön vilken finns på specfica nav li taggar så att det blir lättare och veta vilken sidor tillhör till vilken. Alla färg klasser gör samma sak*/
+    border-color: #43AA8B; /*Ändra border färg*/
 }
 
 .röd:hover{
@@ -97,12 +117,12 @@ nav a:hover{
     border-color: #279AF1;
 }
 
-#börjanu .grön{
+#börjanu .grön{ /*Gör så att börder ska alltid vara grön när du är i specfika sida så att det blir lättare och känna vilken sidor tillhör till varandra. Vilken sidor som man kan välja*/
     border-color: #43AA8B;
 }
 
-#börjanu nav li:nth-child(1){
-    background-color:#43AA8B;
+#börjanu nav li:nth-child(1){ /*Den säger vilken sida du är i just nu. Ful färg betyder att du är i sidan just nu*/
+    background-color:#43AA8B; /*Ändra bakgrund färg*/
 }
 
 #börjanu nav li:nth-child(2) a{
@@ -113,7 +133,7 @@ nav a:hover{
     border-style: dashed;
 }
 
-#hälsomat .röd{
+#hälsomat .röd{ /*Eftersom det finns bara en sida på hälsomat så kan jag skriva båda border och background en gång*/
     border-color: #4E0110;
     background-color: #4E0110;
 }
@@ -122,7 +142,7 @@ nav a:hover{
     border-color: #279AF1;
 }
 
-#omoss nav li:nth-child(4) a{
+#omoss nav li:nth-child(4) a{/*Ändra specfica sidor till dashed styl så att du ska känna lättare och navigera sidan. Dashed betyder att den sidan tillhör och du kan välja den*/
     border-style: dashed;
 }
 
@@ -142,12 +162,6 @@ nav a:hover{
     border-style: dashed;
 }
 
-#uppvärmning .trecolumn{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column: span 2;
-}
-
 #schema .grön{
     border-color: #43AA8B;
 }
@@ -158,32 +172,6 @@ nav a:hover{
 
 #schema nav li:nth-child(1) a{
     border-style: dashed;
-}
-
-#hälsomat main{
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-#hälsomat img{
-    height: 90%;
-}
-
-table{
-    width: 90%;
-}
-
-table, td, th{
-    padding: 15px;
-    border: solid 2px #43AA8B;
-    border-collapse: collapse;
-}
-
-tr:nth-child(odd){
-    background-color: rgba(67,170,139, 0.5);
-}
-
-tr:nth-child(even){
-    background-color: rgba(67,170,139, 0.2);
 }
 
 #kontakt .blå{
@@ -197,44 +185,47 @@ tr:nth-child(even){
 #kontakt nav li:nth-child(3) a{
     border-style: dashed;
 }
+/*----------------------------------------------------------------------------------------*/
 
-form{
-    margin-left: auto;
-    margin-right: auto;
-    border: solid #279AF1;
-    border-radius: 15px;
-    width: 90%;
-    height: 100%;
+/*h1, p styling*/
+h1{
+    display:inline-block;
 }
 
-#kontakt img{
-    height: 100%;
-    margin-top: 0;
+h2, p, table{ /*De har artibut gäller till båda h2,p och table*/
+    font-size: 1.3em;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-input[type="submit"]{
-    font-size: 0.8em;
-    border-style: solid;
-    border-radius: 15px;
-    border-color: #279AF1;
-    background-color: #279AF1;
-    color: #F5FBEF;
-    padding: 7px 10px;
+h2, table{
+    margin-top: 40px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Table*/
+table{
+    width: 90%; /*Ändra bred*/
 }
 
-input[type="submit"]:hover{
-    cursor: pointer;
+table, td, th{
+    padding: 15px;
+    border: solid 2px #43AA8B;
+    border-collapse: collapse; /*Gör så att alla border i table ska bli ansluten*/
 }
 
-textarea{
-    min-width: 400px;
-    min-height: 200px;
-    max-width: 700px;
-    max-height: 400px;
+tr:nth-child(odd){/*Bara udda har den har färgen*/
+    background-color: rgba(67,170,139, 0.5);
 }
 
-#index header a{
-    color: #FFC800;
+tr:nth-child(even){/*Bara jämnt har den har färgen*/
+    background-color: rgba(67,170,139, 0.2);
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Bilder*/
+#hälsomat img{ /*Ändra bara image i hälsomat*/
+    height: 90%; /*height på image*/
 }
 
 #börjanu img{
@@ -261,23 +252,9 @@ textarea{
     border-color: #279AF1;
 }
 
-ul{
-    margin-top: 0px;
-    margin-left: 15px;
-    min-width: 900px;
-}
-
-li{
-    display:inline-block;
-    list-style-type: none;
-    margin-right:45px;
-    font-size: 22px;
-    border-radius: 15px;
-}
-
 #hälsomat ol li{
-    display: list-item;
-    list-style-type: decimal;
+    display: list-item; /*gör så att ol blir till list item*/
+    list-style-type: decimal; /*gör så att värje li ska ha nummer*/
 }
 
 img{
@@ -288,20 +265,49 @@ img{
     margin-top: 50px;
     border: solid #FFC800;
     border-radius: 15px;
-    border-width: 2px;
+    border-width: 2px; /*Border thickness*/
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Form*/
+form{
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #279AF1;
+    border-radius: 15px;
+    width: 90%;
+    height: 100%;
 }
 
-figure{
-    margin: 0;
-    padding: 0;
+#kontakt img{
+    height: 100%;
+    margin-top: 0;
 }
 
-figcaption{
-    font-size: 1.1em;
-    margin-top: 10px;
-    text-align: center;
+input[type="submit"]{ /*Ändra bara den har typen av input*/
+    font-size: 0.8em;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #279AF1;
+    background-color: #279AF1;
+    color: #F5FBEF;
+    padding: 7px 10px;
 }
-iframe{
+
+input[type="submit"]:hover{
+    cursor: pointer; /*Gör så att mussen blir till en pointer*/
+}
+
+textarea{/*En area som user kan skriva i*/
+    min-width: 400px; /*minsta breden*/
+    min-height: 200px; /*minsta höjd*/
+    max-width: 700px;
+    max-height: 400px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Video*/
+iframe{/*Videor från youtube*/
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -310,3 +316,24 @@ iframe{
     border-radius: 15px;
     border-width: 2px;
 }
+/*----------------------------------------------------------------------------------------*/
+
+/*Footer*/
+footer{
+    background-color: #1e1e1e;
+    margin-top: 50px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/*Övrigt*/
+figure{/*Hjälper till med bilder*/
+    margin: 0;
+    padding: 0;
+}
+
+figcaption{/*Skriver ner vad en bild visar*/
+    font-size: 1.1em;
+    margin-top: 10px;
+    text-align: center;
+}
+/*----------------------------------------------------------------------------------------*/
