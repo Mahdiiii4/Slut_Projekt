@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Kontakt</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="Style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body id="kontakt">
+    <div class="wrapper">
+        <header>
+            <ul>
+                <a href="Index.html"><H1>BodyVital</H1></a>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li><a class="grön" href="BörjaNu.html">Börja nu</a></li>
+                <li><a class="röd" href="Hälsomat.html">Hälsomat</a></li>
+                <li><a class="blå" href="OmOss.html">Om oss</a></li>
+                <li><a class="blå" href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form action="tack.html" method="get">
+                <p>
+                    <label for="un">Namn:</label>
+                    <input name="username" id="un" required/>
+                </p>
+                <p>
+                    <label for="em">E-mail:</label>
+                    <input type="email" name="email" id="em" required/>
+                </p>
+                <p>
+                    <label for="tf">Telefonnummer:</label>
+                    <input type="tel" name="nummer" id="tf" required/>
+                </p>
+                <p>
+                    <label for="pw">Lösenord(frivillig):</label>
+                    <input type="password" name="pasword" id="pw">
+                </p>
+                <p>
+                    <label for="y/n">Vill du skapa ett konto? (Lösenord måste fyllas om du skapar ett konto)</label><br>
+        
+                    <label for="ja" id="y/n">Ja</label>
+                    <input type="radio" name="y/n" id="ja">
+        
+                    <label for="nej" id="y/n">Nej</label>
+                    <input type="radio" name="y/n" id="nej">
+                </p>
+                <p>
+                    <label for="hjälp">Vilken typ av hjälp behöver du?</label><br>
+        
+                    <label for="träning" id="hjälp">Träning</label>
+                    <input type="checkbox" name="checkbox" id="Träning">
+                    
+                    <label for="coachning" id="hjälp">Coachning</label>
+                    <input type="checkbox" name="checkbox" id="coachning">
+        
+                    <label for="Jobb" id="hjälp">Jobb</label>
+                    <input type="checkbox" name="checkbox" id="Jobb">
+                </p>
+                <p>
+                    <label for="feedback">Feedback?(frivillig)</label><br>
+                    <textarea id="feedback" name="kommentar" rows="15" cols="80"></textarea>
+                </p>
+                <p>
+                    <a href="Tack.html"><input type="submit" value="Skica in"/></a>
+                </p>
+            </form>
+            <figure>
+                <img src="https://burst.shopifycdn.com/photos/write-notes-from-laptop.jpg?width=925&format=pjpg&exif=1&iptc=1" alt="Online support">
+                <figcaption>Bild: Online support</figcaption>
+            </figure>
+        </main>
+        <footer>
+            <p>Copyright © 2023 BodyVital. Alla rättigheter förbehållna.</p>
+        </footer>
+    </div>
+</body>
+</html>

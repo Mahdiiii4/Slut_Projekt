@@ -1,10 +1,9 @@
 body{
-    font-family:Poppins;
+    font-family:Poppins, 'Times New Roman', Times, serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #656565;
     color: #F5FBEF;
-    margin-bottom: 50px;
     min-width: 800px;
 }
 
@@ -19,11 +18,19 @@ body{
     "footer footer";
 }
 
-
-
 header{
     grid-area:header;
     display:grid;
+}
+
+header a{
+    color: #F5FBEF;
+    transition: color 0.35s, font-size 0.35s;
+}
+
+header a:hover{
+    color: #FFC800;
+    font-size: 1.1em;
 }
 
 main{
@@ -32,41 +39,24 @@ main{
     grid-template-columns: 1fr 1fr;
 }
 
-#hälsomat main{
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-#uppvärmning main{
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:90%;
-    margin-top: 50px;
-    border: solid #FFC800;
-    border-radius: 15px;
-    border-width: 2px;
-}
-
 footer{
     grid-area: footer;
     display: grid;
+    background-color: #1e1e1e;
+    margin-top: 50px;
 }
 
 h1{
     display:inline-block;
 }
 
-h2, p{
+h2, p, table{
     font-size: 1.3em;
     margin-left: 50px;
     margin-right: 50px;
 }
 
-h2{
+h2, table{
     margin-top: 40px;
 }
 
@@ -152,6 +142,12 @@ nav a:hover{
     border-style: dashed;
 }
 
+#uppvärmning .trecolumn{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+}
+
 #schema .grön{
     border-color: #43AA8B;
 }
@@ -164,30 +160,105 @@ nav a:hover{
     border-style: dashed;
 }
 
-#formulär .blå{
+#hälsomat main{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#hälsomat img{
+    height: 90%;
+}
+
+table{
+    width: 90%;
+}
+
+table, td, th{
+    padding: 15px;
+    border: solid 2px #43AA8B;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd){
+    background-color: rgba(67,170,139, 0.5);
+}
+
+tr:nth-child(even){
+    background-color: rgba(67,170,139, 0.2);
+}
+
+#kontakt .blå{
     border-color: #279AF1;
 }
 
-#formulär nav li:nth-child(4){
+#kontakt nav li:nth-child(4){
     background-color: #279AF1;
 }
 
-#formulär nav li:nth-child(3) a{
+#kontakt nav li:nth-child(3) a{
     border-style: dashed;
 }
 
-header a{
-    color: #F5FBEF;
-    transition: color 0.35s, font-size 0.35s;
+form{
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #279AF1;
+    border-radius: 15px;
+    width: 90%;
+    height: 100%;
 }
 
-header a:hover{
-    color: #FFC800;
-    font-size: 1.1em;
+#kontakt img{
+    height: 100%;
+    margin-top: 0;
+}
+
+input[type="submit"]{
+    font-size: 0.8em;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #279AF1;
+    background-color: #279AF1;
+    color: #F5FBEF;
+    padding: 7px 10px;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+textarea{
+    min-width: 400px;
+    min-height: 200px;
+    max-width: 700px;
+    max-height: 400px;
 }
 
 #index header a{
     color: #FFC800;
+}
+
+#börjanu img{
+    border-color: #43AA8B;
+}
+
+#uppvärmning img{
+    border-color: #43AA8B;
+}
+
+#schema img{
+    border-color: #43AA8B;
+}
+
+#hälsomat img{
+    border-color: #4E0110;
+}
+
+#omoss img{
+    border-color: #279AF1;
+}
+
+#kontakt img{
+    border-color: #279AF1;
 }
 
 ul{
@@ -202,4 +273,40 @@ li{
     margin-right:45px;
     font-size: 22px;
     border-radius: 15px;
+}
+
+#hälsomat ol li{
+    display: list-item;
+    list-style-type: decimal;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    margin-top: 50px;
+    border: solid #FFC800;
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+figcaption{
+    font-size: 1.1em;
+    margin-top: 10px;
+    text-align: center;
+}
+iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    border: solid #43AA8B;
+    border-radius: 15px;
+    border-width: 2px;
 }
