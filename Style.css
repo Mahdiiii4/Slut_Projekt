@@ -32,6 +32,10 @@ body{
     grid-template-columns: repeat(3, 1fr); 
 }
 
+#tack main{ /*Ändra bara på sidan tack*/
+    grid-template-columns: 1fr;
+}
+
 header{
     grid-area:header; /*Anger att arean som den tar heter header*/
     display:grid;
@@ -200,6 +204,14 @@ h2, p, table{ /*De har artibut gäller till båda h2,p och table*/
 
 h2, table{
     margin-top: 40px;
+}
+
+#tack h2{ /*Styling för tack meddelande*/
+    font-size: 3em;
+    margin-top: 200px;
+    margin-bottom: 310px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*----------------------------------------------------------------------------------------*/
 
