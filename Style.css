@@ -1,18 +1,16 @@
 /*Body*/
 body{
-    font-family:Poppins, 'Times New Roman', Times, serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Byttar vilken font sidan använder. Om en går sönder
-     så fungerar den 
-    som är efter iställt.*/
+    font-family: Poppins, 'Times New Roman', Times, serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Byttar vilken font sidan använder. Om en går sönder så fungerar den som är efter iställt.*/
     margin: 0; /* Tarbort allt margin för att förleta semantik*/
     padding: 0; /* Tarbort allt padding för att förleta semantik*/
     background-color: #656565; /*bakgrund färg*/
-    color: #F5FBEF; /*text färge*/
+    color: #F5FBEF; /*Text färge*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Grid*/
 .wrapper{
-    display:grid; /*Skapar grid på wrapper som är en div runt om allt i body*/
+    display: grid; /*Skapar grid på wrapper som är en div runt om allt i body*/
     grid-template-columns: 1fr 1fr; /*Skapar 2 columner layout*/
     grid-template-rows: 1fr; /*En row layout*/
     grid-template-areas: 
@@ -23,195 +21,193 @@ body{
 }
 
 #uppvärmning .trecolumn{ /*Ändra specifct i sidan uppvärmning classen trecolumn som finns på en section*/
-    display: grid;
+    display: grid; /*Skapar grid i sidan uppvärmning för att göra det till 3 column med hjälp av linje som är under*/
     grid-template-columns: repeat(3, 1fr); /*Skapar 3 columner layout*/
     grid-column: span 2; /*Gör så att denna section ska ta up 2 platser iställt för 1*/
 }
 
 #hälsomat main{ /*Ändra bara på sidan hälsomat*/
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); /*Skapar en column 3 gånger*/
 }
 
 #tack main{ /*Ändra bara på sidan tack*/
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /*Gör så att det blir bara 1 column i sidan*/
 }
 
 header{
-    grid-area:header; /*Anger att arean som den tar heter header*/
-    display:grid;
+    grid-area: header; /*Anger att arean som den tar heter header*/
+    display: grid; /*Anger grid så att den ska fungera med wrapper*/
 }
 
 nav{
-    grid-area:nav;
-    display:grid;
+    grid-area: nav; /*Anger att arean som den tar heter nav*/
+    display: grid; /*Anger grid så att den ska fungera med wrapper*/
     margin-bottom: 30px; /*30px plats under nav (utryme)*/
 }
 
 main{
-    grid-area:main;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-area: main; /*Anger att arean som den tar heter main*/
+    display: grid; /*Anger grid så att den ska fungera med wrapper*/
+    grid-template-columns: repeat(2, 1fr); /*Skapar en column 2 gånger*/
 }
 
 footer{
-    grid-area: footer;
-    display: grid;
+    grid-area: footer; /*Anger att arean som den tar heter footer*/
+    display: grid; /*Anger grid så att den ska fungera med wrapper*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Header*/
 header a{ /*Ändrar bara a som finns i header tag*/
-    color: #F5FBEF;
+    color: #F5FBEF; /*Anger färg*/
     transition: color 0.35s, font-size 0.35s; /*Animation. Den säger att artibut color ska ha animation som ska vara 0.35sekunder lång. Samt med font-size eller man kan säga scale*/
 }
 
 header a:hover{ /*När musen går över a som finns i header tag så aktiveras den*/
-    color: #FFC800;
-    font-size: 1.1em; /*text storlek*/
+    color: #FFC800; /*Anger färg*/
+    font-size: 1.1em; /*Text storlek*/
 }
 
 #index header a{ /*Ändrar bara i index sidan vilken är BodyVital*/
-    color: #FFC800;
+    color: #FFC800; /*Anger färg*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Nav*/
 ul{
-    margin-top: 0px;
-    margin-left: 15px;
+    margin-top: 0px; /*Gör så att det finns ingen rum övanför*/
+    margin-left: 15px; /*Lägger till lite rum på vinster sidan*/
     min-width: 900px; /*Minsta bred så att den ska inte se dåligt ut*/
 }
 
 li{
-    display:inline-block; /*Gör så att nav bli horizantel och inte ta en hel row för varje nav menu t.ex. "Börjanu", "Hälsomat"*/
-    list-style-type: none; /*tar bort alla style från li så att den blir bara text*/
-    margin-right:45px;
-    font-size: 1.4em;
+    display: inline-block; /*Gör så att nav bli horizantel och inte ta en hel row för varje nav menu t.ex. "Börjanu", "Hälsomat"*/
+    margin-right: 45px; /*Lägger till lite rum på vinster sidan*/
+    font-size: 1.4em; /*Anger hur stor är texten*/
     border-radius: 15px; /*gör så att border blir runda*/
 }
 
 a{
     text-decoration: none; /*Tar bort allt decoration från texten*/
-    color:#F5FBEF;
-    display: inline-block;
+    color:#F5FBEF; /*Anger färg*/
+    display: inline-block; /* änger inline block så att border ska fungera på rätt sätt*/
 }
 
 nav a{ /*Ändrar bara a som finns i nav*/
     padding: 3px 7px; /*Lägger till plats från innut i så att själva knappen ska blir storre*/
-    border-color: #F5FBEF;
-    border: solid; /*gör border style till solid*/
-    border-radius: 15px;
-    transition: padding 0.5s, border-color 0.3s;
+    border-color: #F5FBEF; /*Anger border färg*/
+    border: solid; /*Gör border style till solid*/
+    border-radius: 15px; /*Anger runda horn*/
+    transition: padding 0.5s, border-color 0.3s; /*Anger animation för rum och border färg*/
 }
 
-nav a:hover{
-    padding: 3px 20px;
-    border-style:dashed;
+nav a:hover{ /*Ändra bara när mussen svävar över*/
+    padding: 3px 20px; /*Anger rum för x-led och y-led*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 
-.grön:hover{ /*Ändrar bara klassen grön vilken finns på specfica nav li taggar så att det blir lättare och veta vilken sidor tillhör till vilken. Alla färg klasser gör samma sak*/
+.grön:hover{ /*Ändrar bara klassen grön vilken finns på specfica nav li taggar så att det blir lättare och veta vilken sidor tillhör till vilken. Alla färg klasser gör samma sak*/ /*Ändra bara när mussen svävar över*/
     border-color: #43AA8B; /*Ändra border färg*/
 }
 
-.röd:hover{
-    border-color: #4E0110;
+.röd:hover{ /*Ändra bara när mussen svävar över*/
+    border-color: #4E0110; /*Ändra border färg*/
 }
 
-.blå:hover{
-    border-color: #279AF1;
+.blå:hover{ /*Ändra bara när mussen svävar över*/
+    border-color: #279AF1; /*Ändra border färg*/
 }
 
-#börjanu .grön{ /*Gör så att börder ska alltid vara grön när du är i specfika sida så att det blir lättare och känna vilken sidor tillhör till varandra. Vilken sidor som man kan välja*/
-    border-color: #43AA8B;
+#börjanu .grön{ /*Gör så att börder ska alltid vara grön när du är i specfika sida så att det blir lättare och känna vilken sidor tillhör till varandra. Vilken sidor som man kan välja*/ /*Ändra klassen .green i sidan börjanu*/
+    border-color: #43AA8B; /*Ändra border färg*/
 }
 
-#börjanu nav li:nth-child(1){ /*Den säger vilken sida du är i just nu. Ful färg betyder att du är i sidan just nu*/
+#börjanu nav li:nth-child(1){ /*Den säger vilken sida du är i just nu. Ful färg betyder att du är i sidan just nu*/ /*Ändra bara första barnet i nav lista*/
     background-color:#43AA8B; /*Ändra bakgrund färg*/
 }
 
-#börjanu nav li:nth-child(2) a{
-    border-style: dashed;
+#börjanu nav li:nth-child(2) a{ /*Ändra bara andra barnet i nav lista*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 
-#börjanu nav li:nth-child(3) a{
-    border-style: dashed;
+#börjanu nav li:nth-child(3) a{ /*Ändra bara tredje barnet i nav lista*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 
-#hälsomat .röd{ /*Eftersom det finns bara en sida på hälsomat så kan jag skriva båda border och background en gång*/
-    border-color: #4E0110;
-    background-color: #4E0110;
+#hälsomat .röd{ /*Eftersom det finns bara en sida på hälsomat så kan jag skriva båda border och background en gång*/ /*Ändra bara klassen röd i sidan hälsomat*/
+    border-color: #4E0110; /*Ändra border färg*/
+    background-color: #4E0110; /*Ändra bakgrund färg*/
 }
 
-#omoss .blå{
-    border-color: #279AF1;
+#omoss .blå{ /*Ändra bara klassen blå i sidan om oss*/
+    border-color: #279AF1; /*Ändra border färg*/
 }
 
-#omoss nav li:nth-child(4) a{/*Ändra specfica sidor till dashed styl så att du ska känna lättare och navigera sidan. Dashed betyder att den sidan tillhör och du kan välja den*/
-    border-style: dashed;
+#omoss nav li:nth-child(4) a{/*Ändra specfica sidor till dashed styl så att du ska känna lättare och navigera sidan. Dashed betyder att den sidan tillhör och du kan välja den*/ /*Ändra bara fjärde barnet i nav lista*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 
-#omoss nav li:nth-child(3){
-    background-color:#279AF1;
+#omoss nav li:nth-child(3){ /*Ändra bara trejde barnet i nav lista*/
+    background-color: #279AF1; /*Ändra bakgrund färg*/
 }
 
-#uppvärmning .grön{
-    border-color: #43AA8B;
+#uppvärmning .grön{ /*Ändra bara klassen grön i sidan uppvärmning*/
+    border-color: #43AA8B; /*Ändra border färg*/
 }
 
-#uppvärmning nav li:nth-child(2){
-    background-color: #43AA8B;
+#uppvärmning nav li:nth-child(2){ /*Ändra bara andra barnet i nav lista*/
+    background-color: #43AA8B; /*Ändra bakgrund färg*/
 }
 
-#uppvärmning nav li:nth-child(1) a{
-    border-style: dashed;
+#uppvärmning nav li:nth-child(1) a{ /*Ändra bara första barnet i nav lista*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 
-#schema .grön{
-    border-color: #43AA8B;
+#schema .grön{ /*Ändra bara klassen grön i sidan schema*/
+    border-color: #43AA8B; /*Ändra border färg*/
 }
 
-#schema nav li:nth-child(2){
-    background-color: #43AA8B;
+#schema nav li:nth-child(2){ /*Ändra bara andra barnet i nav lista*/
+    background-color: #43AA8B; /*Ändra bakgrund färg*/
 }
 
-#schema nav li:nth-child(1) a{
-    border-style: dashed;
+#schema nav li:nth-child(1) a{ /*Ändra bara första barnet i nav lista*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 
-#kontakt .blå{
-    border-color: #279AF1;
+#kontakt .blå{ /*Ändra bara klassen blå i sidan kontakt*/
+    border-color: #279AF1; /*Ändra border färg*/
 }
 
-#kontakt nav li:nth-child(4){
-    background-color: #279AF1;
+#kontakt nav li:nth-child(4){ /*Ändra bara fjärde barnet i nav lista*/
+    background-color: #279AF1; /*Ändra bakgrund färg*/
 }
 
-#kontakt nav li:nth-child(3) a{
-    border-style: dashed;
+#kontakt nav li:nth-child(3) a{ /*Ändra bara trejde barnet i nav lista*/
+    border-style: dashed; /*Anger så att border blir dashed - - -*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*h1, p styling*/
 h1{
-    display:inline-block;
+    display: inline-block; /*H1 är inline block så att BodyVital knappen ska inte kunna clickas från var som helst. bara när man musen svävar över själva orden*/
 }
 
 h2, p, table{ /*De har artibut gäller till båda h2,p och table*/
-    font-size: 1.3em;
-    margin-left: 50px;
-    margin-right: 50px;
+    font-size: 1.3em; /*Ändra text storlek*/
+    margin: 0px 50px 0px; /*Lägger lite rum för höger och vänster sida*/
 }
 
-h2, table{
-    margin-top: 40px;
+h2, table{ /*De har artibut gäller till båda h2 och table*/
+    margin-top: 40px; /*Lägger lite rum för toppen*/
 }
 
 #tack h2{ /*Styling för tack meddelande*/
-    font-size: 3em;
-    margin-top: 200px;
-    margin-bottom: 310px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 3em; /*Ändra text storlek*/
+    margin-top: 200px; /*Lägger lite rum för toppen*/
+    margin-bottom: 310px; /*Lägger lite rum för bottom*/
+    margin-left: auto; /*Gör så att den ska hämna i mitten*/
+    margin-right: auto; /*Gör så att den ska hämna i mitten*/
 }
 /*----------------------------------------------------------------------------------------*/
 
@@ -221,131 +217,112 @@ table{
 }
 
 table, td, th{
-    padding: 15px;
-    border: solid 2px #43AA8B;
+    padding: 15px; /*Lägger lite rum innuti elementet för alal sidor*/
+    border: solid 2px #43AA8B; /*Läger border som har typen solid och som är 2px bred och har färgen grön*/
     border-collapse: collapse; /*Gör så att alla border i table ska bli ansluten*/
 }
 
-tr:nth-child(odd){/*Bara udda har den har färgen*/
-    background-color: rgba(67,170,139, 0.5);
+tr:nth-child(odd){/*Bara tr udda har den har färgen*/
+    background-color: rgba(67,170,139, 0.5); /*Grön men färgen är mörkare*/
 }
 
-tr:nth-child(even){/*Bara jämnt har den har färgen*/
-    background-color: rgba(67,170,139, 0.2);
+tr:nth-child(even){/*Bara tr jämnt har den har färgen*/
+    background-color: rgba(67,170,139, 0.2); /*Grön men färgen är ännu mörkare*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Bilder*/
 #hälsomat img{ /*Ändra bara image i hälsomat*/
-    height: 90%; /*height på image*/
+    height: 90%; /*Height på image*/
 }
 
-#börjanu img{
-    border-color: #43AA8B;
+#börjanu, #uppvärmning, #schema img{ /*Ändra border färg för bilder i sidorna börjanu, uppvärmning och schema*/
+    border-color: #43AA8B; /*Border färg är grön*/
 }
 
-#uppvärmning img{
-    border-color: #43AA8B;
+#hälsomat img{ /*Ändra border färg för bilder i sidan hälsomat*/
+    border-color: #4E0110; /*Border färg är röd*/
 }
 
-#schema img{
-    border-color: #43AA8B;
+#omoss, #kontakt img{ /*Ändra border färg för bilder i sidorna omoss och kontakt*/
+    border-color: #279AF1; /*Border färg är blå*/
 }
 
-#hälsomat img{
-    border-color: #4E0110;
-}
-
-#omoss img{
-    border-color: #279AF1;
-}
-
-#kontakt img{
-    border-color: #279AF1;
-}
-
-#hälsomat ol li{
-    display: list-item; /*gör så att ol blir till list item*/
-    list-style-type: decimal; /*gör så att värje li ska ha nummer*/
+#hälsomat ol li{ /*Ändrar ol lista bara i hälsomat sidan*/
+    display: list-item; /*Gör så att ol blir till list item*/
 }
 
 img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:90%;
-    margin-top: 50px;
-    border: solid #FFC800;
-    border-radius: 15px;
+    display: block; /*Gör så att bilden tar hela platsen*/
+    margin-left: auto; /*Gör så att den hämnar i mitten*/
+    margin-right: auto; /*Gör så att den hämnar i mitten*/
+    width: 90%; /*Får storlek 90% av breden på bilder*/
+    margin-top: 50px; /*Lägger lite rum övanför bilder*/
+    border: solid #FFC800; /*Läger border som har typen solid och har färgen gul*/
+    border-radius: 15px; /*Får runda hörn*/
     border-width: 2px; /*Border thickness*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Form*/
 form{
-    margin-left: auto;
-    margin-right: auto;
-    border: solid #279AF1;
-    border-radius: 15px;
-    width: 90%;
-    height: 100%;
+    margin-left: auto; /*Så att den hämnar i mitten*/
+    margin-right: auto; /*Så att den hämnar i mitten*/
+    border: solid #279AF1; /*Läger border som har typen solid och har färgen blå*/
+    border-radius: 15px; /*Runda hörn*/
+    width: 90%; /*Breden tar bara 90%*/
+    height: 100%; /*Height tar hela platsen*/
 }
 
-#kontakt img{
-    height: 100%;
-    margin-top: 0;
+#kontakt img{ /*Ändra bilder i sidan kontakt*/
+    height: 100%; /*Height tar hela platsen*/
+    margin-top: 0; /*Toppen har inget rum övanför*/
 }
 
 input[type="submit"]{ /*Ändra bara den har typen av input*/
-    font-size: 0.8em;
-    border-style: solid;
-    border-radius: 15px;
-    border-color: #279AF1;
-    background-color: #279AF1;
-    color: #F5FBEF;
-    padding: 7px 10px;
+    font-size: 0.8em; /*Height tar hela platsen*/
+    border-style: solid 15px #279AF1; /*Läger border som har typen solid och har färgen blå och bredden 15 pixlar*/
+    background-color: #279AF1; /*Ändra bakgrund färgen till blå*/
+    color: #F5FBEF; /*Ändra text färg till vit*/
+    padding: 7px 10px; /*Lägger rum på alla sidor*/
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover{ /*Ändra bara den har typen av input när mussen sväver övan för den*/
     cursor: pointer; /*Gör så att mussen blir till en pointer*/
 }
 
 textarea{/*En area som user kan skriva i*/
-    min-width: 400px; /*minsta breden*/
-    min-height: 200px; /*minsta höjd*/
-    max-width: 700px;
-    max-height: 400px;
+    min-width: 400px; /*Minsta breden*/
+    min-height: 200px; /*Minsta höjd*/
+    max-width: 700px; /*Max breden*/
+    max-height: 400px; /*Max höjd*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Video*/
 iframe{/*Videor från youtube*/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 35px;
-    border: solid #43AA8B;
-    border-radius: 15px;
-    border-width: 2px;
+    margin-top: 35px; /*Lägger rum på toppen*/
+    border: solid 2px #43AA8B; /*Läger border som har typen solid och har färgen grön och bredden 2 pixlar*/
+    border-radius: 15px; /*Runda hörn*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Footer*/
 footer{
-    background-color: #1e1e1e;
-    margin-top: 50px;
+    background-color: #1e1e1e; /*bakgrund färg*/
+    margin-top: 50px; /*Toppen har extra rum övanför*/
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*Övrigt*/
 figure{/*Hjälper till med bilder*/
-    margin: 0;
-    padding: 0;
+    margin: 0; /*Inget extra rum utanför*/
+    padding: 0; /*Inget extra rum igenom*/
 }
 
 figcaption{/*Skriver ner vad en bild visar*/
-    font-size: 1.1em;
-    margin-top: 10px;
-    text-align: center;
+    font-size: 1.1em; /*Ändras textstorlek*/
+    margin-top: 10px; /*Toppen har extra rum övanför*/
+    text-align: center; /*Lägger texten i mitten*/
 }
 /*----------------------------------------------------------------------------------------*/
