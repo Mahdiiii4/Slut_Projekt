@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <title>Kontakt</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="/Style.css" rel="stylesheet">
+    <link href="./Style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -18,17 +18,17 @@
         </header>
         <nav>
             <ul>
-                <li><a class="grön" href="/börjanu.html">Börja nu</a></li>
-                <li><a class="röd" href="/hälsomat.html">Hälsomat</a></li>
-                <li><a class="blå" href="/omoss.html">Om oss</a></li>
-                <li><a class="blå" href="/kontakt.html">Kontakt</a></li>
+                <li><a class="grön" href="./börjanu.html">Börja nu</a></li>
+                <li><a class="röd" href="./hälsomat.html">Hälsomat</a></li>
+                <li><a class="blå" href="./omoss.html">Om oss</a></li>
+                <li><a class="blå" href="./kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
         <main>
             <form action="tack.html" method="post">
                 <p>
                     <label for="un">Namn:</label>
-                    <input name="username" id="un" required/>
+                    <input type="username" name="username" id="un" required/>
                 </p>
                 <p>
                     <label for="em">E-mail:</label>
@@ -46,22 +46,22 @@
                     <label>Vill du skapa ett konto? (Lösenord måste fyllas om du skapar ett konto)</label><br>
         
                     <label for="ja">Ja</label>
-                    <input type="radio" name="y/n" id="ja">
+                    <input value="ja" type="radio" name="y/n" id="ja">
         
                     <label for="nej">Nej</label>
-                    <input type="radio" name="y/n" id="nej">
+                    <input value="nej" type="radio" name="y/n" id="nej">
                 </p>
                 <p>
                     <label>Vilken typ av hjälp behöver du?</label><br>
         
                     <label for="tr">Träning</label>
-                    <input type="checkbox" name="checkbox" id="tr">
+                    <input value="träning" type="checkbox" name="checkbox" id="tr">
                     
                     <label for="chg">Coachning</label>
-                    <input type="checkbox" name="checkbox" id="chg">
+                    <input value="coaching" type="checkbox" name="checkbox" id="chg">
         
                     <label for="jb">Jobb</label>
-                    <input type="checkbox" name="checkbox" id="jb">
+                    <input value="jobb" type="checkbox" name="checkbox" id="jb">
                 </p>
                 <p>
                     <label for="feedback">Feedback?(frivillig)</label><br>

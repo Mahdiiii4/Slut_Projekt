@@ -11,7 +11,7 @@ body{
 /*Grid*/
 .wrapper{
     display: grid; /*Skapar grid på wrapper som är en div runt om allt i body*/
-    grid-template-columns: 1fr 1fr; /*Skapar 2 columner layout*/
+    grid-template-columns: repeat(2, 1fr); /*Skapar 2 columner layout*/
     grid-template-rows: 1fr; /*En row layout*/
     grid-template-areas: 
     "header header"
@@ -64,12 +64,12 @@ header a{ /*Ändrar bara a som finns i header tag*/
 }
 
 header a:hover{ /*När musen går över a som finns i header tag så aktiveras den*/
-    color: #FFC800; /*Anger färg*/
+    color: gold; /*Anger färg*/
     font-size: 1.1em; /*Text storlek*/
 }
 
 #index header a{ /*Ändrar bara i index sidan vilken är BodyVital*/
-    color: #FFC800; /*Anger färg*/
+    color: gold; /*Anger färg*/
 }
 /*----------------------------------------------------------------------------------------*/
 
@@ -236,7 +236,7 @@ tr:nth-child(even){/*Bara tr jämnt har den har färgen*/
     height: 90%; /*Height på image*/
 }
 
-#börjanu, #uppvärmning, #schema img{ /*Ändra border färg för bilder i sidorna börjanu, uppvärmning och schema*/
+#börjanu img, #uppvärmning img, #schema img{ /*Ändra border färg för bilder i sidorna börjanu, uppvärmning och schema*/
     border-color: #43AA8B; /*Border färg är grön*/
 }
 
@@ -244,7 +244,7 @@ tr:nth-child(even){/*Bara tr jämnt har den har färgen*/
     border-color: #4E0110; /*Border färg är röd*/
 }
 
-#omoss, #kontakt img{ /*Ändra border färg för bilder i sidorna omoss och kontakt*/
+#omoss img, #kontakt img{ /*Ändra border färg för bilder i sidorna omoss och kontakt*/
     border-color: #279AF1; /*Border färg är blå*/
 }
 
@@ -258,7 +258,7 @@ img{
     margin-right: auto; /*Gör så att den hämnar i mitten*/
     width: 90%; /*Får storlek 90% av breden på bilder*/
     margin-top: 50px; /*Lägger lite rum övanför bilder*/
-    border: solid #FFC800; /*Läger border som har typen solid och har färgen gul*/
+    border: solid gold; /*Läger border som har typen solid och har färgen gul*/
     border-radius: 15px; /*Får runda hörn*/
     border-width: 2px; /*Border thickness*/
 }
