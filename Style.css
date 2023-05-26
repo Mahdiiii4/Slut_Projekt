@@ -103,88 +103,7 @@ nav a{ /*Ändrar bara a som finns i nav*/
 
 nav a:hover{ /*Ändra bara när mussen svävar över*/
     padding: 3px 20px; /*Anger rum för x-led och y-led*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
-}
-
-.grön:hover{ /*Ändrar bara klassen grön vilken finns på specfica nav li taggar så att det blir lättare och veta vilken sidor tillhör till vilken. Alla färg klasser gör samma sak*/ /*Ändra bara när mussen svävar över*/
-    border-color: #43AA8B; /*Ändra border färg*/
-}
-
-.röd:hover{ /*Ändra bara när mussen svävar över*/
-    border-color: #4E0110; /*Ändra border färg*/
-}
-
-.blå:hover{ /*Ändra bara när mussen svävar över*/
-    border-color: #279AF1; /*Ändra border färg*/
-}
-
-#börjanu .grön{ /*Gör så att börder ska alltid vara grön när du är i specfika sida så att det blir lättare och känna vilken sidor tillhör till varandra. Vilken sidor som man kan välja*/ /*Ändra klassen .green i sidan börjanu*/
-    border-color: #43AA8B; /*Ändra border färg*/
-}
-
-#börjanu nav li:nth-child(1){ /*Den säger vilken sida du är i just nu. Ful färg betyder att du är i sidan just nu*/ /*Ändra bara första barnet i nav lista*/
-    background-color:#43AA8B; /*Ändra bakgrund färg*/
-}
-
-#börjanu nav li:nth-child(2) a{ /*Ändra bara andra barnet i nav lista*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
-}
-
-#börjanu nav li:nth-child(3) a{ /*Ändra bara tredje barnet i nav lista*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
-}
-
-#hälsomat .röd{ /*Eftersom det finns bara en sida på hälsomat så kan jag skriva båda border och background en gång*/ /*Ändra bara klassen röd i sidan hälsomat*/
-    border-color: #4E0110; /*Ändra border färg*/
-    background-color: #4E0110; /*Ändra bakgrund färg*/
-}
-
-#omoss .blå{ /*Ändra bara klassen blå i sidan om oss*/
-    border-color: #279AF1; /*Ändra border färg*/
-}
-
-#omoss nav li:nth-child(4) a{/*Ändra specfica sidor till dashed styl så att du ska känna lättare och navigera sidan. Dashed betyder att den sidan tillhör och du kan välja den*/ /*Ändra bara fjärde barnet i nav lista*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
-}
-
-#omoss nav li:nth-child(3){ /*Ändra bara trejde barnet i nav lista*/
-    background-color: #279AF1; /*Ändra bakgrund färg*/
-}
-
-#uppvärmning .grön{ /*Ändra bara klassen grön i sidan uppvärmning*/
-    border-color: #43AA8B; /*Ändra border färg*/
-}
-
-#uppvärmning nav li:nth-child(2){ /*Ändra bara andra barnet i nav lista*/
-    background-color: #43AA8B; /*Ändra bakgrund färg*/
-}
-
-#uppvärmning nav li:nth-child(1) a{ /*Ändra bara första barnet i nav lista*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
-}
-
-#schema .grön{ /*Ändra bara klassen grön i sidan schema*/
-    border-color: #43AA8B; /*Ändra border färg*/
-}
-
-#schema nav li:nth-child(2){ /*Ändra bara andra barnet i nav lista*/
-    background-color: #43AA8B; /*Ändra bakgrund färg*/
-}
-
-#schema nav li:nth-child(1) a{ /*Ändra bara första barnet i nav lista*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
-}
-
-#kontakt .blå{ /*Ändra bara klassen blå i sidan kontakt*/
-    border-color: #279AF1; /*Ändra border färg*/
-}
-
-#kontakt nav li:nth-child(4){ /*Ändra bara fjärde barnet i nav lista*/
-    background-color: #279AF1; /*Ändra bakgrund färg*/
-}
-
-#kontakt nav li:nth-child(3) a{ /*Ändra bara trejde barnet i nav lista*/
-    border-style: dashed; /*Anger så att border blir dashed - - -*/
+    border-style: dashed; /*Anger så att border blir dashed*/
 }
 /*----------------------------------------------------------------------------------------*/
 
@@ -195,11 +114,7 @@ h1{
 
 h2, p, table{ /*De har artibut gäller till båda h2,p och table*/
     font-size: 1.3em; /*Ändra text storlek*/
-    margin: 0px 50px 0px; /*Lägger lite rum för höger och vänster sida*/
-}
-
-h2, table{ /*De har artibut gäller till båda h2 och table*/
-    margin-top: 40px; /*Lägger lite rum för toppen*/
+    margin: 20px 50px 0px; /*Lägger lite rum för höger och vänster sida*/
 }
 
 #tack h2{ /*Styling för tack meddelande*/
@@ -232,8 +147,14 @@ tr:nth-child(even){/*Bara tr jämnt har den har färgen*/
 /*----------------------------------------------------------------------------------------*/
 
 /*Bilder*/
-#hälsomat img{ /*Ändra bara image i hälsomat*/
-    height: 90%; /*Height på image*/
+img{
+    display: block; /*Gör så att bilden tar hela platsen*/
+    margin-left: auto; /*Gör så att den hämnar i mitten*/
+    margin-right: auto; /*Gör så att den hämnar i mitten*/
+    width: 90%; /*Får storlek 90% av breden på bilder*/
+    margin-top: 50px; /*Lägger lite rum övanför bilder*/
+    border: solid gold 2px; /*Läger border som har typen solid och har färgen gul och bredden 2px*/
+    border-radius: 15px; /*Får runda hörn*/
 }
 
 #börjanu img, #uppvärmning img, #schema img{ /*Ändra border färg för bilder i sidorna börjanu, uppvärmning och schema*/
@@ -246,21 +167,6 @@ tr:nth-child(even){/*Bara tr jämnt har den har färgen*/
 
 #omoss img, #kontakt img{ /*Ändra border färg för bilder i sidorna omoss och kontakt*/
     border-color: #279AF1; /*Border färg är blå*/
-}
-
-#hälsomat ol li{ /*Ändrar ol lista bara i hälsomat sidan*/
-    display: list-item; /*Gör så att ol blir till list item*/
-}
-
-img{
-    display: block; /*Gör så att bilden tar hela platsen*/
-    margin-left: auto; /*Gör så att den hämnar i mitten*/
-    margin-right: auto; /*Gör så att den hämnar i mitten*/
-    width: 90%; /*Får storlek 90% av breden på bilder*/
-    margin-top: 50px; /*Lägger lite rum övanför bilder*/
-    border: solid gold; /*Läger border som har typen solid och har färgen gul*/
-    border-radius: 15px; /*Får runda hörn*/
-    border-width: 2px; /*Border thickness*/
 }
 /*----------------------------------------------------------------------------------------*/
 
@@ -281,10 +187,11 @@ form{
 
 input[type="submit"]{ /*Ändra bara den har typen av input*/
     font-size: 0.8em; /*Height tar hela platsen*/
-    border-style: solid 15px #279AF1; /*Läger border som har typen solid och har färgen blå och bredden 15 pixlar*/
+    border-width: 0px; /*Tar bort border*/
+    border-radius: 15px; /*Runda hörn*/
     background-color: #279AF1; /*Ändra bakgrund färgen till blå*/
     color: #F5FBEF; /*Ändra text färg till vit*/
-    padding: 7px 10px; /*Lägger rum på alla sidor*/
+    padding: 8px 10px; /*Lägger rum på alla sidor*/
 }
 
 input[type="submit"]:hover{ /*Ändra bara den har typen av input när mussen sväver övan för den*/
@@ -296,6 +203,8 @@ textarea{/*En area som user kan skriva i*/
     min-height: 200px; /*Minsta höjd*/
     max-width: 700px; /*Max breden*/
     max-height: 400px; /*Max höjd*/
+    width: 500px; /*bred*/
+    height: 300px; /*höjd*/
 }
 /*----------------------------------------------------------------------------------------*/
 
@@ -304,6 +213,8 @@ iframe{/*Videor från youtube*/
     margin-top: 35px; /*Lägger rum på toppen*/
     border: solid 2px #43AA8B; /*Läger border som har typen solid och har färgen grön och bredden 2 pixlar*/
     border-radius: 15px; /*Runda hörn*/
+    width: 600px;
+    height: 300px;
 }
 /*----------------------------------------------------------------------------------------*/
 
