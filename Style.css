@@ -104,13 +104,15 @@ nav a{ /*Ändrar bara a som finns i nav*/
 nav a:hover{ /*Ändra bara när mussen svävar över*/
     padding: 3px 20px; /*Anger rum för x-led och y-led*/
     border-style: dashed; /*Anger så att border blir dashed*/
+    border-color: gold;
+}
+
+nav ul:nth-child(1) li{
+    border-color: #43AA8B;
 }
 /*----------------------------------------------------------------------------------------*/
 
 /*h1, p styling*/
-h1{
-    display: inline-block; /*H1 är inline block så att BodyVital knappen ska inte kunna clickas från var som helst. bara när man musen svävar över själva orden*/
-}
 
 h2, p, table{ /*De har artibut gäller till båda h2,p och table*/
     font-size: 1.3em; /*Ändra text storlek*/
