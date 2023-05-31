@@ -22,11 +22,10 @@ body{
 
 #uppvärmning .trecolumn{ /*Ändra specifct i sidan uppvärmning classen trecolumn som finns på en section*/
     display: grid; /*Skapar grid i sidan uppvärmning för att göra det till 3 column med hjälp av linje som är under*/
-    grid-template-columns: repeat(3, 1fr); /*Skapar 3 columner layout*/
     grid-column: span 2; /*Gör så att denna section ska ta up 2 platser iställt för 1*/
 }
 
-#hälsomat main{ /*Ändra bara på sidan hälsomat*/
+#hälsomat main, #uppvärmning .trecolumn{ /*Ändra bara på sidan hälsomat*/
     grid-template-columns: repeat(3, 1fr); /*Skapar en column 3 gånger*/
 }
 
@@ -67,10 +66,6 @@ header a:hover{ /*När musen går över a som finns i header tag så aktiveras d
     color: gold; /*Anger färg*/
     font-size: 1.1em; /*Text storlek*/
 }
-
-#index header a{ /*Ändrar bara i index sidan vilken är BodyVital*/
-    color: gold; /*Anger färg*/
-}
 /*----------------------------------------------------------------------------------------*/
 
 /*Nav*/
@@ -81,16 +76,13 @@ ul{
 }
 
 li{
-    display: inline-block; /*Gör så att nav bli horizantel och inte ta en hel row för varje nav menu t.ex. "Börjanu", "Hälsomat"*/
     margin-right: 45px; /*Lägger till lite rum på vinster sidan*/
     font-size: 1.4em; /*Anger hur stor är texten*/
     border-radius: 15px; /*gör så att border blir runda*/
 }
 
-a{
-    text-decoration: none; /*Tar bort allt decoration från texten*/
-    color:#F5FBEF; /*Anger färg*/
-    display: inline-block; /* änger inline block så att border ska fungera på rätt sätt*/
+ul li{
+    display: inline-block; /*Gör så att nav bli horizantel och inte ta en hel row för varje nav menu t.ex. "Börjanu", "Hälsomat"*/
 }
 
 nav a{ /*Ändrar bara a som finns i nav*/
@@ -107,16 +99,37 @@ nav a:hover{ /*Ändra bara när mussen svävar över*/
     border-color: gold;
 }
 
-nav ul:nth-child(1) li{
-    border-color: #43AA8B;
+a{
+    text-decoration: none; /*Tar bort allt decoration från texten*/
+}
+
+nav a:link{ /*Anger färg för länkar*/
+    color:#279AF1;
+}
+
+nav a:visited{ /*Anger färg för länkar som man har varjet i*/
+    color: #F5FBEF;
+}
+
+nav a:active{ /*Anger färg för länkar som är aktiv*/
+    color: gold;
+}
+
+nav a:focus{ /*Anger färg för länkar som är forkuserad*/
+    color:#4E0110;
 }
 /*----------------------------------------------------------------------------------------*/
 
-/*h1, p styling*/
-
-h2, p, table{ /*De har artibut gäller till båda h2,p och table*/
+/*h2, p styling och tabel*/
+h2, table, #kontakt p{ /*De har artibut gäller till båda h2,p och table*/
     font-size: 1.3em; /*Ändra text storlek*/
-    margin: 20px 50px 0px; /*Lägger lite rum för höger och vänster sida*/
+    margin: 20px 50px; /*Lägger lite rum för höger och vänster sida*/
+}
+
+
+article > p, footer p{
+    font-size: 1.5em;
+    margin: 20px 50px;
 }
 
 #tack h2{ /*Styling för tack meddelande*/
@@ -211,12 +224,12 @@ textarea{/*En area som user kan skriva i*/
 /*----------------------------------------------------------------------------------------*/
 
 /*Video*/
-iframe{/*Videor från youtube*/
+video{/*Videor från youtube*/
     margin-top: 35px; /*Lägger rum på toppen*/
     border: solid 2px #43AA8B; /*Läger border som har typen solid och har färgen grön och bredden 2 pixlar*/
     border-radius: 15px; /*Runda hörn*/
-    width: 600px;
-    height: 300px;
+    width: 600px; /*bred*/
+    height: 300px; /*höjd*/
 }
 /*----------------------------------------------------------------------------------------*/
 
